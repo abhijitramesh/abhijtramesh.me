@@ -38,23 +38,23 @@ export default function Home() {
         </h3>
         <ProjectCard
           title="Semantic Similairy"
-          description="State of the art implementation of sematic similairy using T5 using SNLI corpus of Stranford."
+          description="State of the art implementation of sematic similarity using T5 using SNLI corpus of Stranford."
           href="https://github.com/abhijitramesh/semantic-similarity"
           icon='sematicsimilariy'
         />
         <ProjectCard
           title="tableQA"
-          description="AI Tool for querying natural language on tabular data.TableQA uses huggingface transformersunder the hood"
+          description="AI Tool for querying natural language on tabular data. TableQA uses huggingface transformers under the hood"
           href="https://github.com/abhijitramesh/tableQA"
           icon="tableqa"
         />
         <ProjectCard
           title="Psycic - CCTV"
-          description="A video analysis tool which can analyse low quality video from CCTV footage which can enhancevideo quality using super resolution. The tool also provides features to extract objects using YOLOand split background audio to do forensics"
+          description="A video analysis tool which can analyse low quality video from CCTV footage which can enhance video quality using super resolution. The tool also provides features to extract objects using YOLO and split background audio to do forensics"
           href="https://github.com/Fireboltz/Psychic-CCTV"
           icon="fastfeedback"
         />
-        {/* <Timeline /> */}
+        <Timeline />
         <Subscribe />
       </div>
     </Container>
