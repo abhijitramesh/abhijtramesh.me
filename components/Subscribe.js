@@ -89,8 +89,7 @@ export default function Subscribe() {
         Subscribe to the newsletter
       </h5>
       <p className="my-1 text-gray-800 dark:text-gray-200">
-        Get emails from me about web development, tech, and early access to new
-        articles.
+        Get emails from me about machine learning, tech, statups and more.
       </p>
       <div className="relative my-4">
         <input
