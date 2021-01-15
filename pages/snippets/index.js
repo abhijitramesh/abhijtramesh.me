@@ -4,8 +4,8 @@ import Container from '@/components/Container';
 import FunctionCard from '@/components/FunctionCard';
 import { getAllFilesFrontMatter } from '@/lib/mdx';
 
-const url = 'https://leerob.io/snippets';
-const title = 'Code Snippets – Lee Robinson';
+const url = 'https://abhijitramesh.me/snippets';
+const title = 'Code Snippets – Abhijit Ramesh';
 
 export default function Snippets({ snippets }) {
   return (

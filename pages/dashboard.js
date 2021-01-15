@@ -10,8 +10,8 @@ import Unsplash from '@/components/metrics/Unsplash';
 import YouTube from '@/components/metrics/Youtube';
 import TopTracks from '@/components/TopTracks';
 
-const url = 'https://leerob.io/dashboard';
-const title = 'Dashboard – Lee Robinson';
+const url = 'https://abhijitramesh.me/dashboard';
+const title = 'Dashboard – Abhijit Ramesh';
 const description =
   'My personal dashboard, built with Next.js API routes deployed as serverless functions.';
 
@@ -58,13 +58,7 @@ export default function Dashboard() {
           <Buttondown />
         </div>
         <h2 className="font-bold text-3xl tracking-tight mb-4 mt-16 text-black dark:text-white">
-          Top Tracks
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Curious what I'm currently jamming to? Here's my top tracks on Spotify
-          updated daily.
-        </p>
-        <TopTracks />
       </div>
     </Container>
   );

@@ -5,8 +5,8 @@ import Subscribe from '@/components/Subscribe';
 import NewsletterLink from '@/components/NewsletterLink';
 import { getAllFilesFrontMatter } from '@/lib/mdx';
 
-const url = 'https://leerob.io/newsletter';
-const title = 'Newsletter – Lee Robinson';
+const url = 'https://abhijitramesh.me/newsletter';
+const title = 'Newsletter – Abhijit Ramesh';
 const description =
   'Thoughts on the software industry, programming, tech, videography, music, and my personal life.';
 

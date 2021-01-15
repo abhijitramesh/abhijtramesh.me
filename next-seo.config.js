@@ -1,31 +1,19 @@
-const title = 'Lee Robinson – Developer, writer, creator.';
+const title = 'Abhijit Ramesh';
 const description =
-  'Front-end developer, JavaScript enthusiast, and course creator.';
+'Machine Leanring Entusiast';
 
 const SEO = {
   title,
   description,
-  canonical: 'https://leerob.io',
+  canonical: 'https://abhijitramesh.me',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
-    url: 'https://leerob.io',
+    url: 'https://abhijitramesh.me',
     title,
     description,
-    images: [
-      {
-        url: 'https://leerob.io/static/images/banner.jpg',
-        alt: title,
-        width: 1280,
-        height: 720
-      }
-    ]
   },
-  twitter: {
-    handle: '@leeerob',
-    site: '@leeerob',
-    cardType: 'summary_large_image'
-  }
+
 };
 
 export default SEO;
