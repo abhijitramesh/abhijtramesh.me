@@ -8,7 +8,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx';
 const url = 'https://abhijitramesh.me/blog';
 const title = 'Blog – Abhijit Ramesh';
 const description =
-  'Thoughts on the software industry, programming, tech, videography, music, and my personal life.';
+  'This page will be filled more with failous than success becuase I have learned more ways to succed from my failious';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');

@@ -7,11 +7,11 @@ export default function NotFound() {
   return (
     <Container>
       <NextSeo
-        title="404 – Lee Robinson"
-        canonical="https://leerob.io/404"
+        title="404 – AbhijitRamesh"
+        canonical="https://abhijtramesh.me/404"
         openGraph={{
-          url: 'https://leerob.io/404',
-          title: '404 – Lee Robinson'
+          url: 'https://abhijitramesh.me/404',
+          title: '404 – Abhijit Ramesh'
         }}
       />
       <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
@@ -21,7 +21,7 @@ export default function NotFound() {
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           Why show a generic 404 when I can make it sound mysterious? It seems
           you've found something that used to exist, or you spelled something
-          wrong. I'm guessing you spelled something wrong. Can you double check
+          wrong. I'm guessing you spelled something wrong I do that all the time. Can you double check
           that URL?
         </p>
         <Link href="/">
