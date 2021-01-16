@@ -31,7 +31,7 @@ export default function Dashboard() {
         </h1>
         <div className="mb-8">
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            This is my personal dashboard, Data is important, The goal of this dashboard is to remind myself how much I have to improve by sharing what I have learned over the years.
+            This is my personal dashboard, The goal of this dashboard is to remind myself how much I have to improve by sharing what I have learned over the years.
               <a className="text-gray-900 dark:text-gray-100 underline">
               </a>
           </p>
@@ -43,7 +43,7 @@ export default function Dashboard() {
           <Analytics />
           <GitHub />
         </div>
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 my-2 w-full">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-1 my-2 w-full">
           <Buttondown />
         </div>
         <h2 className="font-bold text-3xl tracking-tight mb-4 mt-16 text-black dark:text-white">
