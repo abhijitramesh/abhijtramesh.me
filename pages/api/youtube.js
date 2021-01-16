@@ -10,7 +10,7 @@ export default async (_, res) => {
   });
 
   const response = await youtube.channels.list({
-    id: 'UCZMli3czZnd1uoc1ShTouQw',
+    id: 'UCHB7v9t-ZOYE0ssOE5az04A',
     part: 'statistics'
   });
 
