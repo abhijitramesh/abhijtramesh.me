@@ -16,6 +16,7 @@ const ExternalLink = ({ href, children }) => (
 export default function Footer() {
   return (
     <footer className="flex flex-col items-center mb-8">
+      <NowPlaying />
       <div className="flex space-x-4 mb-4">
         <ExternalLink href="https://twitter.com/abhijitramesh2k">
           <span className="sr-only">Twitter</span>
@@ -107,6 +108,13 @@ export default function Footer() {
         <Link href="/tweets">
           <a className="text-sm text-gray-500 hover:text-gray-600">/tweets</a>
         </Link> */}
+      </div>
+      <div>
+      <Link href="https://github.com/leerob/leerob.io">
+          <a className="text-sm text-gray-500 hover:text-gray-600">
+            This website is build from leerob.io, If you like what you see click here.
+          </a>
+        </Link>
       </div>
     </footer>
   );
