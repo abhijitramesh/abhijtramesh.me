@@ -1,6 +1,6 @@
 const title = 'Abhijit Ramesh';
 const description =
-'Machine Leanring Entusiast';
+'Machine Learning Enthusiast';
 
 const SEO = {
   title,
