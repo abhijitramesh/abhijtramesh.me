@@ -82,6 +82,11 @@ export default function Container(props) {
           )}
         </button>
         <div>
+          <NextLink href="/feed.xml">
+            <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">
+              RSS
+            </a>
+          </NextLink>
           <NextLink href="/dashboard">
             <a className="p-1 sm:p-4 text-gray-900 dark:text-gray-100">
               Dashboard
