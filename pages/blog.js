@@ -38,9 +38,7 @@ export default function Blog({ posts }) {
           Blog
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          {`I've been writing online since 2014, mostly about web development and tech careers.
-            In total, I've written ${posts.length} articles on this site.
-            Use the search below to filter by title.`}
+          {`This page will be filled more with failous than success becuase I have learned more ways to succed from my failious.`}
         </p>
         <div className="relative w-full mb-4">
           <input
@@ -71,19 +69,14 @@ export default function Blog({ posts }) {
               Most Popular
             </h3>
             <BlogPost
-              title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-              summary="A deep-dive on everything I've learned in the past year building style guides, design systems, component libraries, and their best practices."
-              slug="style-guides-component-libraries-design-systems"
+              title="How to Mine Crypto"
+              summary="Exploring Ethereum and learning how to mine cryptocurrency"
+              slug="how-to-mine-crypto"
             />
             <BlogPost
-              title="How Stripe Designs Beautiful Websites"
-              summary="Examining the tips and tricks used to make Stripe's website design a notch above the rest."
-              slug="how-stripe-designs-beautiful-websites"
-            />
-            <BlogPost
-              title="Creating a Monorepo with Lerna & Yarn Workspaces"
-              summary="In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process."
-              slug="monorepo-lerna-yarn-workspaces"
+              title="Laptop 101 and what to buy for College"
+              summary="Understand Laptop and figure out what you would be needing for college"
+              slug="laptop-101-and-what-to-buy-for-college"
             />
           </>
         )}

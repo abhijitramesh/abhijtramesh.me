@@ -1,0 +1,581 @@
+---
+title: 'How to Mine Crypto'
+publishedAt: '2021-02-21'
+summary: 'Exploring Ethereum and learning how to mine cryptocurrency'
+image: '/static/images/10-days-in-norway/banner.png'
+---
+## How to Mine Crypto
+
+<Image
+  alt={`Norway`}
+  src={`/static/images/how-to-mine-crypto/banner.jpg`}
+  width={1600}
+  height={900}
+  priority
+/>
+
+[Orginal article published in amFOSS blog](https://amfoss.in/blog/how-to-mine-crypto/)
+#### Disclamer
+
+In this blog, I would be using Ethereum mining as a reference to understand how to mine a coin but in theory, understanding how to mine one would do the job and you could apply the same logic to other coins as well. There is an explanation of the very basics of Etherum at the beginning of this blog feel free to skip to Budget if you are fairly familiar with how everything works and just want to know how to mine.
+
+## Introduction to Mining
+
+### The Basics
+
+#### Hashes
+
+![https://miro.medium.com/max/3856/1*SCHCrY-GeCGjSbVk7P8kaQ.png](https://miro.medium.com/max/3856/1*SCHCrY-GeCGjSbVk7P8kaQ.png)
+
+Hashes are functions that when given any arbitrary input would give an output of the same length. These outputs are almost guaranteed to be unique each time.
+
+**Why is this use-full ?**
+
+In a nutshell, if you have the hash of, let's say your Aadhar number, you can prove that you actually had the Aadhar number So hashes are good at proving we have some information that someone else hashed.
+
+#### Merkel Tree
+
+![https://github.com/MetaMask/IPFS-Ethereum-Hackathon/blob/master/slides/01_DanFinlay_intro_to_ethereum_blockchains/images/01_DanFinlay_intro_to_ethereum_blockchains.004.jpeg?raw=true](https://github.com/MetaMask/IPFS-Ethereum-Hackathon/blob/master/slides/01_DanFinlay_intro_to_ethereum_blockchains/images/01_DanFinlay_intro_to_ethereum_blockchains.004.jpeg?raw=true)
+
+Merkle Tree is a data structure, much like arrays or queues. A Merkle Tree is a tree in which every leaf node is labelled with the cryptographic hash of a data block, and every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes. Hash trees allow efficient and secure verification of the contents of large data structures.
+
+To interpret the image above, let's say we have two pairs of two different files on the top of the tree {red, yellow} and {blue, green }. If we hash them together we will have two new hashes, orange and cyan. If we further have it we will have a new hash and this here is a root of the first tree (tree on the left). So if you look at the tree on the right let's say we change one of the input colours the preceding hashes will also change like on the 2nd row for the 2nd Merkle tree the colour has changed and the next one on the root will also change.
+
+So if you look at the tree on the right let's say we change one of the input colours the preceding hashes will also change like on the 2nd row for the 2nd Merkle tree the colour has changed and the next one on the root will also change.
+
+So basically if we had the root has of the first tree of someone they can prove to us that they have so many files in let's say there hard-drive. And if they give the root hash on the tree to the right they can know there was some update done to the files and something changed.
+
+So if we traverse back in the tree we can see where the changes have happened and this is a very cheap way to prove that a small piece of data is in a dataset and this method is called a Merkel Proof.
+
+The colour combinations here are used as a metaphors, let's take any colour like orange. If we are given orange we can prove that we had red and yellow because orange is the combination of red and yellow.
+
+What is the use of this ? Well for one git uses merkel tree.
+
+Also **Blockchain**
+
+![https://github.com/MetaMask/IPFS-Ethereum-Hackathon/blob/master/slides/01_DanFinlay_intro_to_ethereum_blockchains/images/01_DanFinlay_intro_to_ethereum_blockchains.006.jpeg?raw=true](https://github.com/MetaMask/IPFS-Ethereum-Hackathon/blob/master/slides/01_DanFinlay_intro_to_ethereum_blockchains/images/01_DanFinlay_intro_to_ethereum_blockchains.006.jpeg?raw=true)
+
+If we have a root and we have an addition to the root we can hash them both together and create a new root which can be used to prove that the yellow file came after the red file.
+
+## What is Bitcoin?
+
+The same diagram as above but instead of files we use a list of transactions so that we can know what order the transactions took place.This means we have a single source of truth to establish this shared system of transactions
+
+So we have a single source of truth to established this shared money system.
+
+Bitcoin or any Cryptographic currency is meant to solve the double spend problem.
+
+Read about the same in our previous blog is you haven’t already
+
+[https://amfoss.in/blog/cryptocurrency/](https://amfoss.in/blog/cryptocurrency/)
+
+#### Consensus
+
+Read about it here if you haven't already
+
+[https://amfoss.in/blog/blockchain101/](https://amfoss.in/blog/blockchain101/)
+
+Bitcoin uses Proof of work and Etherum uses proof of stake.
+
+**What we are interested in is the incentive we get when we process this consensus for bitcoin or ether.**
+
+The network “rewards” miners who verify transactions and that is where we want to go.
+
+## What is Ethereum?
+<Image
+  alt={`What is Ethereum`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_9.18.12_PM.png`}
+  width={3020}
+  height={1292}
+/>
+
+According to the website it is a platform for decentralised applications.
+
+Ethereum is a platform for decentralised applications - it provides two main features.
+
+- Smart Contracts
+- DAPP
+
+#### What are Smart Contracts ?
+
+A computer program intended to automatically execute according to specific terms or instructions.
+
+#### What does DAPP stand for ?
+
+De-centralised Application
+
+### What are some DAPPs ?
+
+There are lots of DAPPs that run on top of etherium from different section
+
+#### Finance
+<Image
+  alt={`Finance`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_11.31.48_PM.png`}
+  width={2996}
+  height={1718}
+/>
+
+
+#### Art and Collectables
+
+<Image
+  alt={`Art and Collectables`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_11.32.25_PM.png`}
+  width={2996}
+  height={1528}
+/>
+
+
+#### Games
+
+
+<Image
+  alt={`Art and Collectables`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_11.33.00_PM.png`}
+  width={2996}
+  height={946}
+/>
+
+#### Technology
+
+
+<Image
+  alt={`Technology`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_11.33.54_PM.png`}
+  width={2996}
+  height={1046}
+/>
+
+### History
+
+![https://image.cnbcfm.com/api/v1/image/104490344-GettyImages-500445690.jpg?v=1529475204](https://image.cnbcfm.com/api/v1/image/104490344-GettyImages-500445690.jpg?v=1529475204)
+Vitalik Buterin
+
+![https://polkadot.network/assets/img/Gavin-Wood.jpg?v=7b10b657e0](https://polkadot.network/assets/img/Gavin-Wood.jpg?v=7b10b657e0)
+
+
+
+Gavin Wood
+
+Vitalik Buterin and Gavin Wood are the co-founders of Etherum and the Ethereum Foundation. The Ethereum net was launched in July 2015 and started catching on very soon as it became the 2nd most popular crypto right after Bitcoin.Ethereum has its limitations too. It is not very scalable - the network can handle only 15 transactions per second.This is a game that allows users to buy sell and even breed new digital kitties and was one among the few networks which were tested and broke the ethereum network, every action in the game is a transaction in the network and the huge number of kitties being born, sold and bought caused the transactions to increase and intern the transaction fee. Some transactions did not even make it to the network.
+<Image
+  alt={`Coin Base`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-22_at_11.41.37_PM.png`}
+  width={2996}
+  height={1046}
+/>
+
+(Screenshot taken while writing the blog)
+
+### The Internet loves cats
+
+[https://en.wikipedia.org/wiki/Cats_and_the_Internet](https://en.wikipedia.org/wiki/Cats_and_the_Internet)
+
+Ethereum has some limitations too they are not very scalable, the network can handle only 15 transactions per second.
+
+#### CryptoKitties
+
+This is a game that allows users to buy sell and even breed new digital kitties and was one among the few networks which were tested and broke the ethereum network, every action in the game is a transaction in the network and the huge number of kitties being born, sold and bought caused the transactions to increase and intern the transaction fee. Some transaction did not even make it to the network.
+<Image
+  alt={`Crypto Kitties`}
+  src={`/static/images/how-to-mine-crypto/4z0yp7.jpg`}
+  width={680}
+  height={438}
+/>
+
+
+So if a game could bottleneck the whole technology what happens if we use if on some other application which is more sensitive ?
+
+#### DeFI - Decentralised Finance
+
+Ethereum has this cool feature called smart contracts which executes transactions if certain conditions are met. Etherum uses a programming language called Solidity which is based on JavaScript that allows us to write smart contracts. So let's say I want to send some of my money to Akhil next Tuesday, but only if it rains in Kollam on that day according to [weather.com](http://weather.com/) - if not, I want to send the money to Yash. This can be written in the smart contract.
+
+With the help of smart contacts lot of Dapps are build on top of ethereum,
+<Image
+  alt={`Defi-1`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-23_at_12.24.31_AM.png`}
+  width={1874}
+  height={923}
+/>
+<Image
+  alt={`Defi-2`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-23_at_12.25.49_AM.png`}
+  width={1874}
+  height={923}
+/>
+
+Services such as compound finance and uniswap allow users to lend, loan and trade with other users on the internet without having to liquidate their own funds. They can provide their own crypto as collateral that allows users to have banking facilities without the presence of a bank which is the promise of DeFI.
+
+With such an application working using ethereum as a base, it is only natural to expect the limit of 25 transactions per second to be exceeded but not for long as Ethereum 2.0 has already been launched.
+
+## Ethereum 2.0
+
+Ethererum 2.0 is planned to be a set of updates that would be incorporated into the Ethereum network via multiple updates. The things that are addressed by this update are to make Ethereum more
+
+- Scalable
+  - Currently, Ethereum supports only around 25 transactions per second the update aims at increasing this to around 1000 transactions per second without increasing the node size.
+- Secure
+  - Security is one of the most important parts of a decentralised network, Ethereum increases the security of the network against all forms of attack including a 51% attack where someone can do fraudulent transactions by controlling the majority of the network.
+- Sustainable
+  - Currently, Ethereum is using proof of work as a consensus model which requires a lot of energy - this will be replaced by a proof of stake model which is more sustainable.
+
+These updates are being rolled out in different phases by the Ethereum community.
+
+### Proof of Work → Proof of Stake
+
+Currently the proof of work model uses miners who invest resources mainly electricity to verify a hash; this method has been battle tested and is proved to build a functioning blockchain model.
+
+Proof of stake aims at eliminating miners as a whole and would have something known as a validator. Each validator validating a transaction receives a block reward and a transaction fee similar to what is given to a miner.
+
+If a validator decides to act dishonestly and validate fraudulent transactions Ethereum implements a method called **slashing** where the validator would lose a part of theirstaked ETH.
+
+If someone has to pull off a successful 51% attack on a proof of stake system the attacker should own 51% of all staked ETH which is a massive amount of capital.
+
+In order to become a validator one needs to have 32 ETH otherwise one can become a validator by using staking pools.
+
+### Sharding
+
+Sharding is not really a blockchain specific approach; it is a technique in computer science that splits a large database into small chunks that contain pieces of the bigger database each chunk is called a shard.
+
+In ETH 2.0 each shard would be a separate chain initially there would be 64 of them which addresses the ethereum's scalability issue. Each ethereum node only needs to run one shard which eliminates the need for powerful hardware as a small subset of data is used. This means there would be a place for more network participants which intern means more decentralisation.
+
+Initially, sharding will not support both transactions or smart contacts but will use rollups which allows to generate cryptographic proofs for transactions and submitting them to the chain, this only needs a data shard to be available to store the proof so that the scaling issue is addressed with the initial version of the sharding.
+
+### Beacon Chain
+
+Beacon chain is responsible for the coordination of a proof of stake system; it randomly assigns a staker to validate a shard. Randomness is the key aspect here since it would prevent the staker's from taking over the network.
+
+The beacon chain (proof of stake) will run in parallel to the current ethereum chain (proof of work) initially the validators won't be validating the current ethereum chain but this would be possible once it is added as part of the beacon chain in the future as a shard.
+
+### Docking
+
+This is the final stage in ETH 2.0 transaction where the current network is added as a shard in the beacon chain this will mark the end of the proof of work model and the proof of stake model would be able to execute smart contracts.
+
+## Let's talk about money
+
+If you are planning on mining on an existing rig, it should not cost you any extra money to get started but if you are planning to buy/build a specific rig just for crypto mining it will cost a lot of money given the scarcity of GPUs and high price of the components in general.
+
+One more thing to consider is the cost of electricity and component lifecycle as it would be working on 100% load for 24x7.
+
+The cooling should also be considered.
+
+![https://static.nicehash.com/marketing%2FImage%20from%20iOS%20%282%29.jpg](https://static.nicehash.com/marketing%2FImage%20from%20iOS%20%282%29.jpg)
+
+### How much can you earn ?
+
+Don't compare the ether you earn to some other denomination like USD or INR because the market is very volatile. It might just turn out to be a flop one day and after a few days, it might go skyrocketing. The only metric you should be considered about is how much ETH can you mine in one month.
+
+https://whattomine.com/
+
+https://www.mycryptobuddy.com/EthereumMiningCalculator
+
+These are some tools you can use to estimate how much you could mine approximately.
+
+## Wallets
+
+![https://images.unsplash.com/photo-1531190260877-c8d11eb5afaf?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb](https://images.unsplash.com/photo-1531190260877-c8d11eb5afaf?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
+
+In order to store crypto, you need to have a wallet address. This address acts as a log to keep track of transactions. There are many kinds of wallets you could opt for one such depending on your preference.
+
+#### Desktop
+
+A desktop application will store your keys locally on your computer. You can find the best wallet for your use cases from here
+
+[https://ethereum.org/en/wallets/find-wallet/](https://ethereum.org/en/wallets/find-wallet/)
+
+#### Hardware
+
+Storing your keys on a piece of hardware is another viable option.
+
+[https://shop.ledger.com/products/ledger-nano-s](https://shop.ledger.com/products/ledger-nano-s)
+
+[https://trezor.io/](https://trezor.io/)
+
+![https://cdn.vox-cdn.com/thumbor/QtRkOZOjM4Q3qhAFlttPjV_lnbc=/0x0:5400x3600/1200x0/filters:focal(0x0:5400x3600):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10780785/a64065a8de0b28489b58ea09d4ac90ecbe8b99fb65c783b4125b53ae3dab5dca__1_.jpg](https://cdn.vox-cdn.com/thumbor/QtRkOZOjM4Q3qhAFlttPjV_lnbc=/0x0:5400x3600/1200x0/filters:focal(0x0:5400x3600):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/10780785/a64065a8de0b28489b58ea09d4ac90ecbe8b99fb65c783b4125b53ae3dab5dca__1_.jpg)
+
+#### Online
+
+[https://www.myetherwallet.com/](https://www.myetherwallet.com/) help you to generate your wallet address at the same time store your keys somewhere else like a flash drive, desktop or printout for when you want to access your funds.
+
+#### Paper
+
+You can simply take a print out of your keys on paper.
+
+Just make sure you keep that piece of paper safe.
+<Image
+  alt={`Paper`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-27_at_4.35.03_PM.png`}
+  width={694}
+  height={694}
+/>
+
+#### Exchanges
+
+Currency exchange sites like [Coinbase](https://www.coinbase.com/), BTC[-exchange](https://www.btc-exchange.com/) could also store your keys. But generally, it is not recommended to keep your currency there unless you are not trading.
+
+Ideally, you can use one of the digital options as well as an offline method like paper or hardware storage as a backup.
+
+### How to convert Ether to local currency
+
+You can use any of the online exchanges to convert ETH to your local currency. If it is not possible to directly convert ETH to your local currency, you can always convert it to USD and then to your local currency. Sign up in the exchanges and link your bank account, transfer all your Ether from your current wallet to the exchange wallet then you can proceed to arrange a sell order from wallet to the bank account.
+
+## Hardware
+
+#### Motherboard
+
+This is the main component of your computer, you need to be very careful while choosing a motherboard as you want to make sure that everything is compatible with it. You need to make sure that the motherboard of your choice has enough PCI-e slots equal to the number of cards that you are planning on running, the CPU architecture should also have enough PCI-e lanes available.
+
+If you are going to run more than four cards, the motherboard must support 64-bit PCI-e decoding.
+
+#### Processor/CPU
+
+You don't really need a fast processor, you can find the cheapest processor that is compatible with your motherboard and opt for the same, even something like a Celeron would do
+
+#### RAM
+
+If you are planning on using a command-line based interface for your OS like any Linux distribution or ethos you need around 4GB of ram otherwise if you want to use GUI or any Linux distribution with a GUI go for around 8GB of ram.
+
+#### CASE
+
+Depending upon the number of GPU you have and the budget you could go as high as a GPU server case or build something on your own.
+<Image
+  alt={`Paper`}
+  src={`/static/images/how-to-mine-crypto/Screenshot_2021-02-27_at_4.38.10_PM.png`}
+  width={1092}
+  height={616}
+/>
+
+#### Graphic Card
+
+This is something you cannot be recommended with since new GPUs are coming on all the time and many are going out of stock, you should do your own research on what GPU works for you, choose wisely and make sure it is compatible with your motherboard.
+
+Things to consider
+
+- Overclocking
+- Hash Rate
+- Cooling
+
+#### Nvidia or AMD
+
+If you need to make some quick cash and is ready to get your hands dirty by doing some BIOS mode go with AMD.
+
+Otherwise if you want to be able to overclock and have the flexibility of using Windows go with Nvidia
+
+#### VRAM
+
+You would ideally need a minimum of 4GB of VRAM to do some mining.
+
+#### Power Supply
+
+Go through the specifications of all the components of your rig and find the power drawn. Add them together and if you get a power-supply a bit above that range you’re good to go. If you are planning to upgrade in the future, investing in a better power supply would be wiser. Also, look into the Power Supply rating, the higher the power supply rating, the more would be the efficiency you can get.
+
+That being said if you are going to go with an overkill power supply for your rig you might end up drawing more power and thereby more electricity which could end up costing you more than what you earn by mining.
+
+#### Power Monitor
+
+If you are planning to go pro on mining invest in a power monitor to see how much power your rig is drawing and how much it is costing you in terms of electricity cost in order to see whether you are making money by mining or spending it all on the expenses.
+
+## Software
+
+### Operating System
+
+Depending upon your skill you may choose any OS you would like and configure all your drivers and be ready to start mining. Anything from Linux to Windows and even ethOS would work.
+
+### Pool
+
+A pool is a collection of miners who are putting their systems together to solve a block. This would make it easier to solve the block compared to doing it alone.
+
+If your rig is producing less than 400-500 MH/s, you should probably consider joining a pool. Pools have different payout methods that will decide how much your pay is. The idea is that a solo miner will take around a week or so to solve a block and will be rewarded with 3ETH if the miner solves it. otherwise not. While in a pool even if you don't solve the block you are paid for your contribution to solving
+
+#### Payout methods
+
+- **PPLNS** (*Pay Per Last "N" Shares*): Payment is decided based on the last number of shares in total, not just the shares for the last block-solving round.
+- **PPS** (*Pay Per Share*): Worker is paid a set payout for each share.
+- **Prop** (*Proportional*): Block's reward is distributed proportional to the number of shares submitted by the miner.
+- **HBPPS** (*Hour-Based Pay Per Share*): Each submitted share earns a fixed amount of coins distributed proportionally to how many shares were submitted in the past hour.
+- **RBPPS** (*Round-Based Pay Per Share*): Each submitted share earns a fixed amount of coins distributed proportionally among workers based on total number of shares submitted.
+
+#### Factors to consider
+
+- **Pool**: Collection of miners
+- **Fee**: Cost to mine on the pool
+- **Min Payout**: How how you need to mine before Ether is sent to your wallet
+- **VarDiff**: Your share difficulty will rise or fall depending on your overall hashrate. This ensures that low-hashrate users don't get sent difficult blocks, and high-hashrate users aren't sent easy blocks.
+- **Monitoring**: View your hashrate and contributions
+- **Server Location**: Where the server is geographically located
+- **Coins**: What coins you can mine on the pool
+- **Payment Type**: See above chart for 'Payment Methods'
+- **Hashing Power**: Overall hashing power across all miners in the pool
+
+### Mining Application
+
+You need an application to start mining, a few of them are
+
+Genoil's Ethminer
+
+Claymore's dual miner
+
+and qtminer
+
+**Genoil's Ethminer** is easy to use and has no fees to worry about. It has a huge community of developers as well.
+
+**Claymore** is very famous and it has the ability to dual-mine coins to spread assets around different currencies. There is a fee associated with this depending on the operations you do and the amount of coin you are earning.
+
+Now that you have all the following ready,
+
+- an Crypto wallet
+- a pool
+- a mining application
+- and check that all the video cards are seen by your os
+
+You can start mining based on the os of your choice as explained below.
+
+### Mining on Windows
+
+For AMD cards you need to download the blockchain specific driver.
+
+For Nvidia cards you can simply download the latest driver.
+
+Make sure that you have downloaded the mining application of your choice as well.
+
+#### Genoli's Ethminer
+
+1. Extract the dowloaded files to a folder
+2. create a new file with txt extension so that you can edit it (for example Start.txt) in the same folder.
+3. Edit the file and add the following,
+```bash
+`setx GPU_FORCE_64BIT_PTR 0`
+
+`setx GPU_MAX_HEAP_SIZE 100`
+
+`setx GPU_USE_SYNC_OBJECTS 1`
+
+`setx GPU_MAX_ALLOC_PERCENT 100`
+
+`setx GPU_SINGLE_ALLOC_PERCENT 100`
+
+`ethminer.exe --farm-recheck 200 -G -S <Mining_Pool_Address> -O <Your_Ethereum_Wallet_Address>.<Friendly_Name_For_Computer>`
+```
+In the highlighted line replace -G with -U if you are using a Nvidia driver, replace
+
+**<Mining_Pool_Address>** with your pool address
+
+**<Your_Ethereum_Wallet_Address>** with your wallet address
+
+**<Friendly_Name_For_Computer>** and a name for your computer
+
+make sure to replace everything including the  (angle brackets)
+
+Rename the txt file to .bat file to be able to execute it. ie.. Start.txt to Start.bat
+
+4. Double-click the Start.bat to start mining.
+
+#### Claymore
+
+1. Extract the dowloaded files to a folder
+2. create a new file with txt extension so that you can edit it (for example Start.txt) in the same folder.
+3. Edit the file and add the following,
+```bash
+`setx GPU_FORCE_64BIT_PTR 0`
+
+`setx GPU_MAX_HEAP_SIZE 100`
+
+`setx GPU_USE_SYNC_OBJECTS 1`
+
+`setx GPU_MAX_ALLOC_PERCENT 100`
+
+`setx GPU_SINGLE_ALLOC_PERCENT 100`
+
+`EthDcrMiner64.exe -epool <Mining_Pool_Address> -ewal <Your_Ethereum_Wallet_Address>.<Friendly_Name_For_Computer> -epsw x`
+```
+**<Mining_Pool_Address>** with your pool address
+
+**<Your_Ethereum_Wallet_Address>** with your wallet address
+
+**<Friendly_Name_For_Computer>** and a name for your computer
+make sure to replace everything including the (angle brackets)
+
+Rename the txt file to .bat file to be able to execute it. ie.. Start.txt to Start.bat
+
+### Mining on Linux
+
+Install the AMD driver
+
+```bash
+cd ~/Downloads
+wget --referer=http://support.amd.com https://www2.ati.com/drivers/linux/ubuntu/amdgpu-pro-17.10-414273.tar.xz
+tar -Jxvf amdgpu-pro-17.10-414273.tar.xz
+cd amdgpu-pro-17.10-414273
+./amdgpu-pro-install -y
+```
+
+or
+
+Install the Nvidia driver
+
+```bash
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_7.5-18_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1404_7.5-18_amd64.deb
+sudo apt-get -y install software-properties-common
+sudo apt-get update
+sudo apt-get install git cmake libcrypto++-dev libleveldb-dev libjsoncpp-dev libjsonrpccpp-dev libboost-all-dev libgmp-dev libreadline-dev libcurl4-gnutls-dev ocl-icd-libopencl1 opencl-headers mesa-common-dev libmicrohttpd-dev build-essential cuda -y
+```
+
+#### Claymore
+
+Download and unpack Claymore,
+
+- `cd ~/Downloads`
+- `wget https://github.com/nanopool/Claymore-Dual-Miner/releases/download/v9.5/Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v9.5.-.LINUX.tar.gz`
+- `sudo mkdir /usr/local/claymore95`
+- `sudo tar -xvf Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v9.5.-.LINUX.tar.gz -C /usr/local/claymore95`
+
+Create a mining script
+
+`cd /usr/local/claymore95`
+
+`sudo chmod u+s ethdcrminer64`
+
+Create a file mine.sh with the text editor of your choice
+
+```bash
+#!/bin/sh
+
+export GPU_FORCE_64BIT_PTR=0
+
+export GPU_MAX_HEAP_SIZE=100
+
+export GPU_USE_SYNC_OBJECTS=1
+
+export GPU_MAX_ALLOC_PERCENT=100
+
+export GPU_SINGLE_ALLOC_PERCENT=100
+
+./ethdcrminer64 -epool <Mining_Pool_Address> -ewal <Your_Ethereum_Wallet_Address>.<Friendly_Name_For_Computer> -epsw x -mode 1 -tt 68 -allpools 1
+```
+
+Paste the following to the file and make necessary replacements and save the file.
+
+Give the file executable permission
+
+`sudo chmod +x mine.sh`
+
+You can also configure auto mining on startup if required.
+
+## Should I mine ?
+
+If you have read about proof of stake from the beginning of the blog you know that this is something that would make miners obsolete but that is only in the case of Ethereum. You can still become a validator if you have enough, 30 ETH once shading is introduced before that it is speculated to be 1000 ETH. You can continue mining ETH until Ethereum is completely transferred to proof of stake and be in the position to be a validator. As I said before we are only using Ethereum as a reference, in theory, mining other coins should also have a similar procedure.
+
+## Sources
+
+I used a lot of sources to compile this blog from various people who are experts in this domain. If you want to go deeper, definitely visit the following sources:
+
+[https://www.reddit.com/r/EtherMining/wiki/index](https://www.reddit.com/r/EtherMining/wiki/index)
+
+[https://www.youtube.com/watch?v=-SMliFtoPn8](https://www.youtube.com/watch?v=-SMliFtoPn8)
+
+[https://github.com/MetaMask/IPFS-Ethereum-Hackathon](https://github.com/MetaMask/IPFS-Ethereum-Hackathon)
+[https://www.youtube.com/watch?v=dTcojDhr-eE](https://www.youtube.com/watch?v=dTcojDhr-eE)
+
+[https://www.youtube.com/watch?v=ctzGr58_jeI](https://www.youtube.com/watch?v=ctzGr58_jeI)

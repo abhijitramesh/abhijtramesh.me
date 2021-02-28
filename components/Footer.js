@@ -97,17 +97,17 @@ export default function Footer() {
         <Link href="/uses">
           <a className="text-sm text-gray-500 hover:text-gray-600">/uses</a>
         </Link>
-        <Link href="/newsletter">
-          <a className="text-sm text-gray-500 hover:text-gray-600">
-            /newsletter
-          </a>
-        </Link>
-        {/* <Link href="/snippets">
-          <a className="text-sm text-gray-500 hover:text-gray-600">/snippets</a>
-        </Link>
-        <Link href="/tweets">
-          <a className="text-sm text-gray-500 hover:text-gray-600">/tweets</a>
-        </Link> */}
+        {/*<Link href="/newsletter">*/}
+        {/*  <a className="text-sm text-gray-500 hover:text-gray-600">*/}
+        {/*    /newsletter*/}
+        {/*  </a>*/}
+        {/*</Link>*/}
+        {/* <Link href="/snippets">*/}
+        {/*  <a className="text-sm text-gray-500 hover:text-gray-600">/snippets</a>*/}
+        {/*</Link>*/}
+        {/*<Link href="/tweets">*/}
+        {/*  <a className="text-sm text-gray-500 hover:text-gray-600">/tweets</a>*/}
+        {/*</Link> */}
       </div>
       <div>
       <Link href="https://github.com/leerob/leerob.io">
