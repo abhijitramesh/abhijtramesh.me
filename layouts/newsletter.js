@@ -7,7 +7,7 @@ import Subscribe from '@/components/Subscribe';
 export default function NewsletterLayout({ children, frontMatter }) {
   return (
     <Container
-      title={`${frontMatter.title} – Lee Robinson`}
+      title={`${frontMatter.title} – Abhijit Ramesh`}
       description={frontMatter.summary}
       date={new Date(frontMatter.publishedAt).toISOString()}
       type="article"
