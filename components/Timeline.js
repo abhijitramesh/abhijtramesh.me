@@ -40,6 +40,36 @@ const Step = ({ title, children }) => {
 
 const FullTimeline = () => (
   <>
+    <Year>2019</Year>
+    <ul>
+      <Step title="Got a fully funded scholarship by Bertlasmann Tech">
+        After three months of introduction challenge got selected for the Bertlsmann scholarship to
+        do deep-leanring nanodegree by Udacity.
+      </Step>
+      <Step title="Mentoring for Google Code-in 👨‍🏫">
+        Mentored pre-university students under the Google Code-In program to help them contribute toopen source for all of the Android Projects in the Mifos Initiative.
+      </Step>
+      <Step title="Started Learning Deep Learning 🤔">
+        Started Learning Deep Learning, fast.ai seems to be a good place for someone like me to begin with.
+        Also following the tradition and going with the Andrew Ng course.
+      </Step>
+      <Step title="Participating in InOut 7.0">
+        One of the Best Hackathon's I have even been to,
+        building an Android Application which gamifies planintng trees.
+      </Step>
+      <Step title="Completed GSoC 2019 🎁">
+        Its a wrap, Completed Google Summer of Code sucessfully and submited work report.
+      </Step>
+      <Step title="Took 2nd workshop">
+        This time I am taking a workshop in my college as part of CIR road to excellence this workshop is also about Android Development
+        but with inclusion of Software Engineering practices.
+      </Step>
+      <Step title="Started working on Google Summer of Project">
+        I got selected for Google Summer of Code with Mifos Initiative, My goals are to implementing the
+        client side screens by taking the Fineract CN APIs,
+        figuring out consumer APIs and worked onimplementing data models along with migration of the entire project to Android-X
+      </Step>
+    </ul>
     <Divider />
       <Year>2018</Year>
       <ul>
@@ -84,8 +114,20 @@ export default function Timeline() {
       <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-8 text-black dark:text-white">
         Timeline
       </h3>
+      <Year>2021</Year>
+      <Step title="Completed TreeHacks 🤩">
+      This is really exciting for me, TreeHacks is hosted by Stanford one of my favourite universities with cutting Edge AI research.
+      </Step>
+      <Step title="Hack the North 2020 ✅">
+        Got selected for Hack the North 2020. What a good way to start the year.
+      </Step>
+      <Divider/>
       <Year>2020</Year>
       <ul>
+        <Step title="Completed InOut 7.0 📦">
+          Finishing off this year with a submission to InOut 7.0, This is my second InOut and still one of the best Hackathons I have attended
+          (trust me I have attended many), well managed and they managed to keep it fun even in Online mode. Cheers team InOut 🥂
+        </Step>
         <Step title="Moving to NLP 🤭">
           Recently I am very excited by Natual language processing, 
           started working on tableQA an AI tool for querying natual langauge on tabluar data. 
@@ -120,36 +162,6 @@ export default function Timeline() {
         </Step>
       </ul>
       <Divider />
-      <Year>2019</Year>
-      <ul>
-      <Step title="Got a fully funded scholarship by Bertlasmann Tech">
-          After three months of introduction challenge got selected for the Bertlsmann scholarship to 
-          do deep-leanring nanodegree by Udacity.
-        </Step>
-        <Step title="Mentoring for Google Code-in 👨‍🏫">
-        Mentored pre-university students under the Google Code-In program to help them contribute toopen source for all of the Android Projects in the Mifos Initiative.
-        </Step>
-        <Step title="Started Learning Deep Learning 🤔">
-          Started Learning Deep Learning, fast.ai seems to be a good place for someone like me to begin with.
-          Also following the tradition and going with the Andrew Ng course.
-        </Step>
-        <Step title="Participating in InOut 7.0">
-          One of the Best Hackathon's I have even been to,
-           building an Android Application which gamifies planintng trees.
-        </Step>
-        <Step title="Completed GSoC 2019 🎁">
-          Its a wrap, Completed Google Summer of Code sucessfully and submited work report.
-        </Step>
-        <Step title="Took 2nd workshop">
-          This time I am taking a workshop in my college as part of CIR road to excellence this workshop is also about Android Development 
-          but with inclusion of Software Engineering practices.
-        </Step>
-        <Step title="Started working on Google Summer of Project">
-          I got selected for Google Summer of Code with Mifos Initiative, My goals are to implementing the 
-          client side screens by taking the Fineract CN APIs,
-           figuring out consumer APIs and worked onimplementing data models along with migration of the entire project to Android-X
-        </Step>
-      </ul>
       {isShowingFullTimeline ? (
         <FullTimeline />
       ) : (
