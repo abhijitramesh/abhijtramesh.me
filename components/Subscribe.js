@@ -137,10 +137,10 @@ export default function Subscribe() {
         <SuccessMessage>{form.message}</SuccessMessage>
       ) : (
         <p className="text-sm text-gray-800 dark:text-gray-200">
-          {`${subscriberCount || '-'} subscribers – `}
-          <Link href="/newsletter">
-            <a>26 issues</a>
-          </Link>
+          {`${subscriberCount || '-'} subscribers  `}
+          {/*<Link href="/newsletter">*/}
+          {/*  <a>26 issues</a>*/}
+          {/*</Link>*/}
         </p>
       )}
     </div>
