@@ -57,14 +57,14 @@ export default function Blog({ posts }) {
               Most Popular
             </h3>
             <BlogPost
+              title="Part 1 : Learning Hands-on Machine Learning with Scikit-learn Keras and Tensorflow"
+              summary="Notes on The Machine Leaning Landscape"
+              slug="part1-learning-hands-on-machine-leanring-with-scikit-learn-keras-and-tensorflow"
+            />
+            <BlogPost
               title="How to Mine Crypto"
               summary="Exploring Ethereum and learning how to mine cryptocurrency"
               slug="how-to-mine-crypto"
-            />
-            <BlogPost
-              title="Laptop 101 and what to buy for College"
-              summary="Understand Laptop and figure out what you would be needing for college"
-              slug="laptop-101-and-what-to-buy-for-college"
             />
           </>
         )}
